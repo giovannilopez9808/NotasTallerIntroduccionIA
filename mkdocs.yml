@@ -1,0 +1,53 @@
+site_name: Introducción a la inteligencia artificial
+nav:
+  - Introducción: ./index.md
+  - Optimization: ./optimization.md
+  - Gradient descent: ./gradient_descent.md
+  - Regression: ./regression.md
+  - Dimensionality reduction: ./dimensionality_reduction.md
+  - Linear neural network: ./linear_neural_network.md
+  - Perceptron: ./perceptron.md
+  - Convolutional: ./convolutional.md
+  - Recurrent: ./recurrent.md
+  - CNN-RNN: ./cnnrnn.md
+  - Attention: ./attention.md
+  - Transformer: ./transformer.md
+  - GAN's: ./gan.md
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+    #- toc.integrate
+    - navigation.top
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mathjax.js
+  - javascripts/polyfill.min.js
+
+extra:
+  generator: false
