@@ -91,20 +91,20 @@ f(\lambda x + (1-\lambda)y) \leq \lambda f(x) (1-\lambda) f(x)
 $$
 Se dice que una función es convexa cuando no se requiere la igualdad de los terminos. Algunos ejemplos de funciones convexas son:
 $$
-\begin{align}
+\begin{aligned}
 f(x)&=x^2 & \text{Función cuadratica}\nonumber \\\\
 f(x)&=Ax+b & \text{Funciones afines} \nonumber\\\\
 f(x)&=||x|| & \text{Cualquier norma de un vextor} \nonumber\\\\
-\end{align} \nonumber
+\end{aligned} \nonumber
 $$
 
 ### **Funciones convexas diferenciales**
 
 Sea $f: D\rightarrow \mathbb{R}$ diferenciable sobre un dominio convexo y abierto $D$. Entonces, $f$ es convexa si y solo si
 $$
-f(x) \geq f(\bar{x})+\nabla f(\bar{x})^T (x-\bar{x})
+f(x) \geq f(\x')+\nabla f(\x')^T (x-\x')
 $$
-para todo $x,\bar{x} \in D$.
+para todo $x,\x' \in D$.
 
 ### **Funciones convexas diferenciables dos veces**
 
@@ -112,7 +112,7 @@ Sea $f: D\rightarrow \mathbb{R}$ de clase $C^2$ sobre un dominio convexo y abier
 
 1. Para todos los vectores no nulos ($x\in \mathbb{R}^n$) tenemos que: $$ x^TMx \geq 0 $$
 2. Todos los eigenvalores de $M$ son positivos.
-3. La función $$ < x,y > = x^TMy $$
+3. La función $$ < x,y  > = x^TMy $$
 define un producto interno en $\mathbb{R}^n$.
 4. Todos los menores principales de $M$ son positivos.
 
@@ -129,14 +129,186 @@ donde $f:D\rightarrow \mathbb{R}$ es convexa y $ D\subset \mathbb{R}^n$ es conve
 - *Óptimo Local Estricto*: $x^* \in \mathbb{R}^n $ es el óptimo local estricto si $f(y)> f(x^*), \forall y \in \Omega$, donde $\Omega$ es una vecindad abierta que contiene a $x^*$.
 - *Óptimo Local*: $x^* \in \mathbb{R}^n$ es el óptimo local estricto si $f(y) \geq f(x^*), \forall y \in \Omega$, donde $\Omega$ es una vecindad abierta que contiene a $x^*$.
 
+### **Minimos globales bajo convexidad**
+
+Considerando el problema de optimización donde se supone que la función $f$ es diferenciable. Un punto $x^* \in D$ es mínimo global si y solo si
+$$
+\nabla f(x^\*)^T (x-x^\*) \geq 0 \;\;\; \forall x \in D
+$$
+
 ### **Dirección de descenso**
+
+Se dice que $d$ es una dirección de descenso en el punto $x'$ para el problema propuesto de optimización cuando se cumple que:
+$$
+f(x') > f(x'+\epsilon d)
+$$
+donde $\epsilon$ es suficientemente pequeña. Con el fin de encontrar la condición de descenso se utilizara una expansión de la serie de Taylor de la función $f$ en el punto $x'$. Del procedimiento se obtiene lo siguiente:
+$$
+\begin{aligned}
+f(x') & > f(x'+\epsilon d)\nonumber \\\\
+& > f(x') + \epsilon \nabla f(x')^T d + \epsilon^2 d^T \nabla^2 f(x') d+ \dots \nonumber \\\\
+& \approx f(x') + \epsilon \nabla f(x')^T d \nonumber \\\\
+\end{aligned}
+$$
+dado que $|\epsilon^n| > |epsilon|$ para $n>1$. La dirección de descenso $d$ debe cumplir que:
+$$
+-\nabla f(x')^T d > 0
+$$
 
 ### **Condición de optimalidad de primer orden**
 
+Se tiene que en el punto óptimo $(x^*)$ de una función suave $(f)$ no existe una dirección de descenso. Esto es:
+$$
+\nexists d: -\nabla f(x^*)^T d > 0
+$$
+
+ya que
+
+$$
+\nabla f(x^*) = 0
+$$
+
 ### **Condición de optimalidad de segundo orden**
 
-#### **Condiciones de segundo orden sin restricciones**
+En general, la condición de optimalidad de primer orden es necesaria, pero no es suficiente para encontrar una solución. Es decir, en un mínimo local, el gradiente se desvanece. Sin embargo, esto también sucedee cuando se encuentra un máximo local o global. Para distinguir estos casos necesitamos la condiciones de segundo orden.  
+Sea el problema de optimización sin restricciones:
+$$
+\underset{x\in D}{min}\; f(x)
+$$
+La solución $(x^*)$ satisface la condición de optimalidad primer orden:
+$$
+\nabla f(x^*) = 0
+$$
 
-#### **Condición necesaria de segundo orden**
+Esto evita que un método de descenso actualice el punto óptimo:
 
-#### **Condición suficiente de segundo orden**
+$$
+x' \leftarrow x' - \alpha \nabla f(x^*)
+$$
+
+Sin embargo, por medio la approximación de series de Taylor de segundo orden notamos que para un $\epsilon$ suficientemente pequeña:
+
+$$
+f(x^*+\epsilon d)  = f(x^*)+\frac{1}{2}\epsilon^2 d^T \nabla^2 f(x^*) d
+$$
+
+como $x^*$ es el punto óptimo y $\epsilon>0$ se obtiene que:
+
+$$
+d^T \nabla^2 f(x^*) d \geq 0, \forall d
+$$
+
+### **Condición suficiente de segundo orden**
+
+Sea el problema:
+$$
+\underset{x\in D}{min}\; f(x)
+$$
+
+con $f$ suave y $x^*$ es un punto tal que:
+
+$$
+\begin{aligned}
+\nonumber
+\nabla f(x^*) &= 0 \\ \nonumber
+\nabla^2 f(x^*) & \;\text{es definido positivo} \\
+\end{aligned}
+$$
+
+Con el fin de demostrar que $x^*$ es un punto óptimo se elije estudiarlo bajo la perspectiva que este punto se encuentra dentro de una bola abierta de radio $r$. esto es:
+$$
+D = \{z:||x^*-x||<0\}
+$$
+
+tal que $\nabla^2 f(x)$ se mantenga definido positivo. Tomando un vector $d$ tal que:
+
+$$
+x+\epsilon d \in D
+$$
+
+Entonces, tomando un $\epsilon$ sumamente pequeño, se tiene que:
+
+$$
+f(x^*+\epsilon d)  = f(x^*)+\frac{1}{2}\epsilon^2 d^T \nabla^2 f(x^*) d
+$$
+
+dado que:
+
+$$
+\begin{aligned}
+\nonumber
+\nabla f(x^*) = 0 \\ \nonumber
+\epsilon^2d^T\nabla^2 f(x^*)d > 0 \\
+\end{aligned}
+$$
+
+tenemos que
+
+$$
+f(x^*+\epsilon d) > f(x^*)
+$$
+
+por lo tanto $x^*$ es un mínimo de la función.
+
+
+``` python
+from matplotlib import pyplot
+from numpy import (
+    concatenate,
+    arange,
+    zeros,
+)
+
+N = 10
+x = (arange(0, N)/N)**2
+z = zeros(int(N/2))
+f1 = concatenate([x[::-1], z, x])
+f2 = concatenate([-x[::-1], z, x])
+f3 = concatenate([x[::-1], x])
+fig, (ax1, ax2, ax3) = pyplot.subplots(
+    1,
+    3,
+    figsize=(20, 4)
+)
+ax1.plot(f3, 'b')
+ax1.annotate(
+    r'$\nabla f=0, \;\; \nabla^2f \succ 0$',
+    xy=(9.5, 0),
+    xytext=(6.4, .2),
+    arrowprops=dict(
+        facecolor='red',
+        shrink=1
+    ),
+)
+ax1.axis("off")
+ax2.plot(
+    f1,
+    'b'
+)
+ax2.annotate(
+    r'$\nabla f=0, \;\; \nabla^2f = 0$',
+    xy=(12, 0), xytext=(8, .15),
+    arrowprops=dict(
+        facecolor='red',
+        shrink=1
+    ),
+)
+ax2.axis("off")
+ax3.plot(f2, 'b')
+ax3.annotate(
+    r'$\nabla f=0, \;\; \nabla^2f = 0$',
+    xy=(12, 0),
+    xytext=(8, .3),
+    arrowprops=dict(
+        facecolor='red',
+        shrink=1
+    ),
+)
+ax3.axis("off")
+pyplot.tight_layout()
+pyplot.savefig(
+    "test.png"
+)
+```
+
+De los tres casos mostrados en la figura anterior, los dos promeros (de la izquierda) corresponden a mínimos locales (soluciones) y el tercero a un punto de mesa (no-solución).
