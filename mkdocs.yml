@@ -1,51 +1,17 @@
 site_name: Introducción a la inteligencia artificial
 nav:
   - Introducción: ./index.md
-  - Optimization: ./optimization.md
-  - Gradient descent: ./gradient_descent.md
-  - Regression: ./regression.md
-  - Dimensionality reduction: ./dimensionality_reduction.md
-  - Linear neural network: ./linear_neural_network.md
-  - Perceptron: ./perceptron.md
-  - Convolutional: ./convolutional.md
-  - Recurrent: ./recurrent.md
-  - CNN-RNN: ./cnnrnn.md
-  - Attention: ./attention.md
+  - Optimización: ./optimization.md
+  - Regresiónn lineal: ./regression.md
+  - Reducción de dimensionalidad: ./dimensionality_reduction.md
+  - Redes neuronales lineales: ./linear_neural_network.md
+  - Perceptron multicapa: ./perceptron.md
+  - Redes convolucionales: ./convolutional.md
+  - Redes recurrentes: ./recurrent.md
+  - Redes híbridas: ./cnnrnn.md
+  - Mecanismo de atención: ./attention.md
   - Transformer: ./transformer.md
   - GAN's: ./gan.md
-theme:
-  name: material
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - rust
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: custom
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      primary: custom
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  features:
-    - navigation.indexes
-    #- toc.integrate
-    - navigation.top
-
-markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 #- katex optimization for large equations
 extra_javascript:
@@ -56,7 +22,55 @@ extra_javascript:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/extra.css
-  #- stylesheets/dark_theme.css
-  #- stylesheets/codehilite.css
+
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: deep purple
+      accent: deep purple
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    #- navigation.tabs
+    #- navigation.indexes
+    #- toc.integrate
+
+markdown_extensions:
+  - toc:
+      toc_depth: 2
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 extra:
   generator: false
