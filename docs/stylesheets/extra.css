@@ -3,6 +3,18 @@
   --md-primary-fg-color--light: #48CAE4;
   --md-primary-fg-color--dark:  #03045E;
 }
+.md-main__inner {
+  max-width: none;
+}
+.md-sidebar--primary {
+  left: 0;
+}
+.md-sidebar--secondary {
+  right: 0;
+  margin-left: 0;
+  -webkit-transform: none;
+  transform: none;   
+}
 [data-md-color-scheme="default"] {
     background-color: #f8f9fa;
 }
