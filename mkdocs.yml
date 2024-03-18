@@ -22,6 +22,7 @@ extra_javascript:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/extra.css
+  - stylesheets/monokai.css
 
 theme:
   logo: assets/images/icon.png
@@ -31,29 +32,12 @@ theme:
     - yaml
     - rust
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: cyan
-      accent: cyan
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      primary: deep purple
-      accent: deep purple
-      scheme: slate
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+    primary: deep purple
+    accent: deep purple
+    scheme: slate
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to light mode
   features:
     - navigation.sections
     - navigation.expand
@@ -64,6 +48,7 @@ theme:
     #- toc.integrate
 
 markdown_extensions:
+  - codehilite
   - toc:
       toc_depth: 2
   - pymdownx.arithmatex:
@@ -72,6 +57,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight: # provide options that apply also to the superfences extension
+      use_pygments: false
 
 extra:
   generator: false
