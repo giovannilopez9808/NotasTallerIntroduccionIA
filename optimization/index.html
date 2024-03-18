@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../stylesheets/monokai.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +64,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Introducción a la inteligencia artificial" class="md-header__button md-logo" aria-label="Introducción a la inteligencia artificial" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/images/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,43 +119,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -227,8 +190,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Introducción a la inteligencia artificial" class="md-nav__button md-logo" aria-label="Introducción a la inteligencia artificial" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/images/icon.png" alt="logo">
 
     </a>
     Introducción a la inteligencia artificial
@@ -336,9 +298,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optimizacion-convexa" class="md-nav__link">
+  <a href="#convexidad" class="md-nav__link">
     <span class="md-ellipsis">
-      Optimización convexa
+      Convexidad
     </span>
   </a>
   
@@ -576,8 +538,8 @@
                   
 
 
-<h1 id="optimizacion">Optimización</h1>
-<h2 id="derivada-parcial">Derivada parcial</h2>
+<h1 id="optimizacion"><strong>Optimización</strong></h1>
+<h2 id="derivada-parcial"><strong>Derivada parcial</strong></h2>
 <p>Calcular la derivada parcial de una función que mapea un vector a un valor escalar (<span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span>), corresponde a calcular la derivada de la función respecto a esa variable asuminedo las demás variables son constantes. Esto es:
 $$
 \large
@@ -588,7 +550,7 @@ $$
 \frac{\partial f(x)}{\partial x_i}  \overset{def}{=}\underset{h\rightarrow 0}{lim}\;\; \frac{f(x+he_i)-f(x)}{h}
 $$
 donde <span class="arithmatex">\(x\)</span> es un vector de dimensión <span class="arithmatex">\(n\)</span> y <span class="arithmatex">\(e_i\)</span> es un vector unitario, el cual tiene ceros en cada posición excepto en <span class="arithmatex">\(i\)</span> donde se encuentra un uno.  </p>
-<h2 id="gradiente-y-jacobiano">Gradiente y jacobiano</h2>
+<h2 id="gradiente-y-jacobiano"><strong>Gradiente y jacobiano</strong></h2>
 <p>En matemáticas, el gradiente es una generalización de la derivada, ya que la derivada de una función esta definida para unicamente funciones de una variable. El gradiente es una función de valor vectorial. El gradiente esta definido como:
 $$
 \large
@@ -602,7 +564,7 @@ $$
 \end{matrix}
 \right)
 $$
-Con ello, se puede observar que el operador gradiente lleva a una función <span class="arithmatex">\(n\)</span> variabas variables a un vector de dimensión <span class="arithmatex">\(n\)</span> donde el elemento i-esimo es la derivada parcial de la función con respecto a la variable <span class="arithmatex">\(i\)</span>. El operador del gradiente se escribe como <span class="arithmatex">\(\nabla \{\}\)</span> y el vector gradiente como <span class="arithmatex">\(\nabla_f\)</span>   </p>
+Con ello, se puede observar que el operador gradiente lleva a una función <span class="arithmatex">\(n\)</span> variabas variables a un vector de dimensión <span class="arithmatex">\(n\)</span> donde el elemento i-esimo es la derivada parcial de la función con respecto a la variable <span class="arithmatex">\(i\)</span>. El operador del gradiente se escribe como <span class="arithmatex">\(\nabla \{\}\)</span> y el vector gradiente como <span class="arithmatex">\(\nabla_f\)</span>  </p>
 <p>Por otro lado, si se tiene una función que mapea de un espacio vectorial de dimensión <span class="arithmatex">\(n\)</span> a un espacio de dimensión <span class="arithmatex">\(m\)</span> <span class="arithmatex">\((f:\mathbb{R}^n \rightarrow \mathbb{R}^m)\)</span>, el concepto de derivada no se encuetra definido con el operador gradiente. Es por ello que se necesita definir el concepto del operador jacobiano. La definición del jacobiano es la siguiente:<br />
 Sea <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}^m\)</span>, una función cuyas derivadas parciales de primer orden existen en todo <span class="arithmatex">\(\mathbb{R}^n\)</span> y denotemos como <span class="arithmatex">\(f_1,f_2,f_3,\dots,f_m\)</span> a sus componentes escalares. Se define la matriz jacobiana de <span class="arithmatex">\(f\)</span> en un punto <span class="arithmatex">\(x \in \mathbb{R}^n\)</span> como:
 $$
@@ -617,7 +579,7 @@ J_f(x) = \left(
 \end{matrix}
 \right)
 $$</p>
-<h2 id="hessiano">Hessiano</h2>
+<h2 id="hessiano"><strong>Hessiano</strong></h2>
 <p>La matriz hessiana o hessiano de un campo escalar es una matriz cuadrada de dimensión <span class="arithmatex">\(n \times n\)</span> que tiene como elementos las derivadas parciales de segundo orden. La matriz hessiana se define como:  </p>
 <p>Sea <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span>, un campo escalar cuyas derivadas parciales de segundo grado existen (clase <span class="arithmatex">\(C^2\)</span>). La matriz hessiana de <span class="arithmatex">\(f\)</span>, denotada por <span class="arithmatex">\(H_f(x)\)</span>, es una matriz cuadrada <span class="arithmatex">\(n \times n\)</span> definida como:
 $$
@@ -626,7 +588,7 @@ H_f(x) = \left(
 \begin{matrix}
 \frac{\partial^2 f}{\partial x_1^2} (x) &amp;\frac{\partial^2 f}{\partial x_1 \partial x_2} (x) &amp; \dots &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} (x) \\
 \frac{\partial^2 f}{\partial x_2 \partial x_1} (x) &amp;\frac{\partial^2 f}{\partial x_2^2} (x) &amp; \dots &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} (x) \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 \frac{\partial^2 f}{\partial x_n \partial x_1} (x) &amp;\frac{\partial^2 f}{\partial x_n \partial x_2} (x) &amp; \dots &amp; \frac{\partial^2 f}{\partial x_n^2} (x) \\
 \end{matrix}
 \right)
@@ -643,14 +605,203 @@ Con esto se tiene que el hessiano es calculado como:
 $$
 \nabla^2 f = \nabla^T \nabla f
 $$</p>
-<h2 id="optimizacion-convexa">Optimización convexa</h2>
-<h2 id="optimalidad">Optimalidad</h2>
-<h3 id="direccion-de-descenso">Dirección de descenso</h3>
-<h3 id="condicion-de-optimalidad-de-primer-orden">Condición de optimalidad de primer orden</h3>
-<h3 id="condicion-de-optimalidad-de-segundo-orden">Condición de optimalidad de segundo orden</h3>
-<h4 id="condiciones-de-segundo-orden-sin-restricciones">Condiciones de segundo orden sin restricciones</h4>
-<h4 id="condicion-necesaria-de-segundo-orden">Condición necesaria de segundo orden</h4>
-<h4 id="condicion-suficiente-de-segundo-orden">Condición suficiente de segundo orden</h4>
+<h2 id="convexidad"><strong>Convexidad</strong></h2>
+<h3 id="conjunto-convexo"><strong>Conjunto convexo</strong></h3>
+<p>Un conjunto $\Omega \subseteq \mathbb{R}^n $ es convexo si
+$$
+\lambda x +(1-\lambda)y \in \Omega, \forall x,y \in \Omega\;\text{y}\; \lambda\in [0,1]
+$$</p>
+<h3 id="funcion-convexa"><strong>Función convexa</strong></h3>
+<p>Una función <span class="arithmatex">\(f: D\rightarrow\mathbb{R}\)</span> es estrictamente convexa si su dominio <span class="arithmatex">\(D\subset \mathbb{R}^n\)</span> es convexo, y para todo <span class="arithmatex">\(x,y \in D\)</span> para todo <span class="arithmatex">\(\lambda \in [0,1]\)</span>, se verifica
+$$
+f(\lambda x + (1-\lambda)y) \leq \lambda f(x) (1-\lambda) f(x)
+$$
+Se dice que una función es convexa cuando no se requiere la igualdad de los terminos. Algunos ejemplos de funciones convexas son:
+$$
+\begin{aligned}
+f(x)&amp;=x^2 &amp; \text{Función cuadratica}\nonumber \\
+f(x)&amp;=Ax+b &amp; \text{Funciones afines} \nonumber\\
+f(x)&amp;=||x|| &amp; \text{Cualquier norma de un vextor} \nonumber\\
+\end{aligned} \nonumber
+$$</p>
+<h3 id="funciones-convexas-diferenciales"><strong>Funciones convexas diferenciales</strong></h3>
+<p>Sea <span class="arithmatex">\(f: D\rightarrow \mathbb{R}\)</span> diferenciable sobre un dominio convexo y abierto <span class="arithmatex">\(D\)</span>. Entonces, <span class="arithmatex">\(f\)</span> es convexa si y solo si
+$$
+f(x) \geq f(\x')+\nabla f(\x')^T (x-\x')
+$$
+para todo <span class="arithmatex">\(x,\x' \in D\)</span>.</p>
+<h3 id="funciones-convexas-diferenciables-dos-veces"><strong>Funciones convexas diferenciables dos veces</strong></h3>
+<p>Sea <span class="arithmatex">\(f: D\rightarrow \mathbb{R}\)</span> de clase <span class="arithmatex">\(C^2\)</span> sobre un dominio convexo y abierto <span class="arithmatex">\(D\)</span>. Entonces, <span class="arithmatex">\(f\)</span> es convexa si y solo si <span class="arithmatex">\(H_f(x)\)</span> es semidefinida positiva para todo <span class="arithmatex">\(x\in D\)</span>. Una matriz semidefinida positiva es una matriz hermitiana <span class="arithmatex">\(M\)</span> cuando se cumple una de las siguientes condiciones:</p>
+<ol>
+<li>Para todos los vectores no nulos (<span class="arithmatex">\(x\in \mathbb{R}^n\)</span>) tenemos que: $$ x^TMx \geq 0 $$</li>
+<li>Todos los eigenvalores de <span class="arithmatex">\(M\)</span> son positivos.</li>
+<li>La función $$ &lt; x,y  &gt; = x^TMy $$
+define un producto interno en <span class="arithmatex">\(\mathbb{R}^n\)</span>.</li>
+<li>Todos los menores principales de <span class="arithmatex">\(M\)</span> son positivos.</li>
+</ol>
+<h2 id="optimalidad"><strong>Optimalidad</strong></h2>
+<p>La optimización convexa trata el problema general de minimizar una función convexa, sobre un conjunto factible también convexo:
+$$
+\underset{x\in D}{min}\; f(x)
+$$
+donde <span class="arithmatex">\(f:D\rightarrow \mathbb{R}\)</span> es convexa y $ D\subset \mathbb{R}^n$ es convexo. En un problema convexo no hay distinción entre mínimos globales y locales. Es por ello que existen diferentes clasificaciones dependiendo de las condiciones que cumplan. Estas clasificaciones son la siguientes:</p>
+<ul>
+<li><em>Óptimo global estricto</em>: $x^* \in \mathbb{R}^n $ es el óptimo global estricto si <span class="arithmatex">\(f(y)&gt;f(x^*), \forall y \in \mathbb{R}^n\)</span>.</li>
+<li><em>Óptimo global</em>: $x^* \in \mathbb{R}^n $ es el óptimo global si <span class="arithmatex">\(f(y)\geq f(x^*), \forall y \in \mathbb{R}^n\)</span>.</li>
+<li><em>Óptimo Local Estricto</em>: $x^* \in \mathbb{R}^n $ es el óptimo local estricto si <span class="arithmatex">\(f(y)&gt; f(x^*), \forall y \in \Omega\)</span>, donde <span class="arithmatex">\(\Omega\)</span> es una vecindad abierta que contiene a <span class="arithmatex">\(x^*\)</span>.</li>
+<li><em>Óptimo Local</em>: <span class="arithmatex">\(x^* \in \mathbb{R}^n\)</span> es el óptimo local estricto si <span class="arithmatex">\(f(y) \geq f(x^*), \forall y \in \Omega\)</span>, donde <span class="arithmatex">\(\Omega\)</span> es una vecindad abierta que contiene a <span class="arithmatex">\(x^*\)</span>.</li>
+</ul>
+<h3 id="minimos-globales-bajo-convexidad"><strong>Minimos globales bajo convexidad</strong></h3>
+<p>Considerando el problema de optimización donde se supone que la función <span class="arithmatex">\(f\)</span> es diferenciable. Un punto <span class="arithmatex">\(x^* \in D\)</span> es mínimo global si y solo si
+$$
+\nabla f(x^*)^T (x-x^*) \geq 0 \;\;\; \forall x \in D
+$$</p>
+<h3 id="direccion-de-descenso"><strong>Dirección de descenso</strong></h3>
+<p>Se dice que <span class="arithmatex">\(d\)</span> es una dirección de descenso en el punto <span class="arithmatex">\(x'\)</span> para el problema propuesto de optimización cuando se cumple que:
+$$
+f(x') &gt; f(x'+\epsilon d)
+$$
+donde <span class="arithmatex">\(\epsilon\)</span> es suficientemente pequeña. Con el fin de encontrar la condición de descenso se utilizara una expansión de la serie de Taylor de la función <span class="arithmatex">\(f\)</span> en el punto <span class="arithmatex">\(x'\)</span>. Del procedimiento se obtiene lo siguiente:
+$$
+\begin{aligned}
+f(x') &amp; &gt; f(x'+\epsilon d)\nonumber \\
+&amp; &gt; f(x') + \epsilon \nabla f(x')^T d + \epsilon^2 d^T \nabla^2 f(x') d+ \dots \nonumber \\
+&amp; \approx f(x') + \epsilon \nabla f(x')^T d \nonumber \\
+\end{aligned}
+$$
+dado que <span class="arithmatex">\(|\epsilon^n| &gt; |epsilon|\)</span> para <span class="arithmatex">\(n&gt;1\)</span>. La dirección de descenso <span class="arithmatex">\(d\)</span> debe cumplir que:
+$$
+-\nabla f(x')^T d &gt; 0
+$$</p>
+<h3 id="condicion-de-optimalidad-de-primer-orden"><strong>Condición de optimalidad de primer orden</strong></h3>
+<p>Se tiene que en el punto óptimo <span class="arithmatex">\((x^*)\)</span> de una función suave <span class="arithmatex">\((f)\)</span> no existe una dirección de descenso. Esto es:
+$$
+\nexists d: -\nabla f(x^*)^T d &gt; 0
+$$</p>
+<p>ya que</p>
+<div class="arithmatex">\[
+\nabla f(x^*) = 0
+\]</div>
+<h3 id="condicion-de-optimalidad-de-segundo-orden"><strong>Condición de optimalidad de segundo orden</strong></h3>
+<p>En general, la condición de optimalidad de primer orden es necesaria, pero no es suficiente para encontrar una solución. Es decir, en un mínimo local, el gradiente se desvanece. Sin embargo, esto también sucedee cuando se encuentra un máximo local o global. Para distinguir estos casos necesitamos la condiciones de segundo orden.<br />
+Sea el problema de optimización sin restricciones:
+$$
+\underset{x\in D}{min}\; f(x)
+$$
+La solución <span class="arithmatex">\((x^*)\)</span> satisface la condición de optimalidad primer orden:
+$$
+\nabla f(x^*) = 0
+$$</p>
+<p>Esto evita que un método de descenso actualice el punto óptimo:</p>
+<div class="arithmatex">\[
+x' \leftarrow x' - \alpha \nabla f(x^*)
+\]</div>
+<p>Sin embargo, por medio la approximación de series de Taylor de segundo orden notamos que para un <span class="arithmatex">\(\epsilon\)</span> suficientemente pequeña:</p>
+<div class="arithmatex">\[
+f(x^*+\epsilon d)  = f(x^*)+\frac{1}{2}\epsilon^2 d^T \nabla^2 f(x^*) d
+\]</div>
+<p>como <span class="arithmatex">\(x^*\)</span> es el punto óptimo y <span class="arithmatex">\(\epsilon&gt;0\)</span> se obtiene que:</p>
+<div class="arithmatex">\[
+d^T \nabla^2 f(x^*) d \geq 0, \forall d
+\]</div>
+<h3 id="condicion-suficiente-de-segundo-orden"><strong>Condición suficiente de segundo orden</strong></h3>
+<p>Sea el problema:
+$$
+\underset{x\in D}{min}\; f(x)
+$$</p>
+<p>con <span class="arithmatex">\(f\)</span> suave y <span class="arithmatex">\(x^*\)</span> es un punto tal que:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\nonumber
+\nabla f(x^*) &amp;= 0 \\ \nonumber
+\nabla^2 f(x^*) &amp; \;\text{es definido positivo} \\
+\end{aligned}
+\]</div>
+<p>Con el fin de demostrar que <span class="arithmatex">\(x^*\)</span> es un punto óptimo se elije estudiarlo bajo la perspectiva que este punto se encuentra dentro de una bola abierta de radio <span class="arithmatex">\(r\)</span>. esto es:
+$$
+D = {z:||x^*-x||&lt;0}
+$$</p>
+<p>tal que <span class="arithmatex">\(\nabla^2 f(x)\)</span> se mantenga definido positivo. Tomando un vector <span class="arithmatex">\(d\)</span> tal que:</p>
+<div class="arithmatex">\[
+x+\epsilon d \in D
+\]</div>
+<p>Entonces, tomando un <span class="arithmatex">\(\epsilon\)</span> sumamente pequeño, se tiene que:</p>
+<div class="arithmatex">\[
+f(x^*+\epsilon d)  = f(x^*)+\frac{1}{2}\epsilon^2 d^T \nabla^2 f(x^*) d
+\]</div>
+<p>dado que:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\nonumber
+\nabla f(x^*) = 0 \\ \nonumber
+\epsilon^2d^T\nabla^2 f(x^*)d &gt; 0 \\
+\end{aligned}
+\]</div>
+<p>tenemos que</p>
+<div class="arithmatex">\[
+f(x^*+\epsilon d) &gt; f(x^*)
+\]</div>
+<p>por lo tanto <span class="arithmatex">\(x^*\)</span> es un mínimo de la función.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">concatenate</span><span class="p">,</span>
+    <span class="n">arange</span><span class="p">,</span>
+    <span class="n">zeros</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">])</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="o">-</span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">])</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f3</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s1">&#39;$\nabla f=0, \;\; \nabla^2f \succ 0$&#39;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">9.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">6.4</span><span class="p">,</span> <span class="mf">.2</span><span class="p">),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+        <span class="n">shrink</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">f1</span><span class="p">,</span>
+    <span class="s1">&#39;b&#39;</span>
+<span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s1">&#39;$\nabla f=0, \;\; \nabla^2f = 0$&#39;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">.15</span><span class="p">),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+        <span class="n">shrink</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s1">&#39;$\nabla f=0, \;\; \nabla^2f = 0$&#39;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">.3</span><span class="p">),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+        <span class="n">shrink</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span>
+    <span class="s2">&quot;test.png&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>De los tres casos mostrados en la figura anterior, los dos promeros (de la izquierda) corresponden a mínimos locales (soluciones) y el tercero a un punto de mesa (no-solución).</p>
 
 
 
