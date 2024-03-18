@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../gradient_descent/">
+        <link rel="next" href="../regression/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Optimization - Introducción a la inteligencia artificial</title>
+        <title>Optimización - Introducción a la inteligencia artificial</title>
       
     
     
@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#optimization" class="md-skip">
+        <a href="#optimizacion" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Optimization
+              Optimización
             
           </span>
         </div>
@@ -125,20 +125,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
       </label>
     
   
@@ -211,7 +221,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Introducción a la inteligencia artificial" class="md-nav__button md-logo" aria-label="Introducción a la inteligencia artificial" data-md-component="logo">
       
@@ -264,7 +276,7 @@
           
   
   <span class="md-ellipsis">
-    Optimization
+    Optimización
   </span>
   
 
@@ -275,7 +287,7 @@
         
   
   <span class="md-ellipsis">
-    Optimization
+    Optimización
   </span>
   
 
@@ -297,18 +309,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#uno" class="md-nav__link">
+  <a href="#derivada-parcial" class="md-nav__link">
     <span class="md-ellipsis">
-      Uno
+      Derivada parcial
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dos" class="md-nav__link">
+  <a href="#gradiente-y-jacobiano" class="md-nav__link">
     <span class="md-ellipsis">
-      Dos
+      Gradiente y jacobiano
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hessiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hessiano
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizacion-convexa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización convexa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimalidad
     </span>
   </a>
   
@@ -329,31 +368,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gradient_descent/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gradient descent
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Regression
+    Regresiónn lineal
   </span>
   
 
@@ -373,7 +392,7 @@
         
   
   <span class="md-ellipsis">
-    Dimensionality reduction
+    Reducción de dimensionalidad
   </span>
   
 
@@ -393,7 +412,7 @@
         
   
   <span class="md-ellipsis">
-    Linear neural network
+    Redes neuronales lineales
   </span>
   
 
@@ -413,7 +432,7 @@
         
   
   <span class="md-ellipsis">
-    Perceptron
+    Perceptron multicapa
   </span>
   
 
@@ -433,7 +452,7 @@
         
   
   <span class="md-ellipsis">
-    Convolutional
+    Redes convolucionales
   </span>
   
 
@@ -453,7 +472,7 @@
         
   
   <span class="md-ellipsis">
-    Recurrent
+    Redes recurrentes
   </span>
   
 
@@ -473,7 +492,7 @@
         
   
   <span class="md-ellipsis">
-    CNN-RNN
+    Redes híbridas
   </span>
   
 
@@ -493,7 +512,7 @@
         
   
   <span class="md-ellipsis">
-    Attention
+    Mecanismo de atención
   </span>
   
 
@@ -549,50 +568,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#uno" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uno
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dos
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -601,12 +576,81 @@
                   
 
 
-<h1 id="optimization">Optimization</h1>
-<h2 id="uno">Uno</h2>
-<div class="arithmatex">\[
-f(x)=\int \frac{\partial f(x)}{\partial y} dy
-\]</div>
-<h2 id="dos">Dos</h2>
+<h1 id="optimizacion">Optimización</h1>
+<h2 id="derivada-parcial">Derivada parcial</h2>
+<p>Calcular la derivada parcial de una función que mapea un vector a un valor escalar (<span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span>), corresponde a calcular la derivada de la función respecto a esa variable asuminedo las demás variables son constantes. Esto es:
+$$
+\large
+\frac{\partial f(x_1,x_2,x_3,\dots,x_i,\dots,x_n)}{\partial x_i} \overset{def}{=}\underset{h\rightarrow 0}{lim}\;\; \frac{f(x_1,x_2,x_3,\dots,x_i+h,\dots,x_n)-f(x_1,x_2,x_3,\dots,x_i,\dots,x_n)}{h}
+$$
+lo cual, se puede escribir de la siguiente manera:
+$$
+\frac{\partial f(x)}{\partial x_i}  \overset{def}{=}\underset{h\rightarrow 0}{lim}\;\; \frac{f(x+he_i)-f(x)}{h}
+$$
+donde <span class="arithmatex">\(x\)</span> es un vector de dimensión <span class="arithmatex">\(n\)</span> y <span class="arithmatex">\(e_i\)</span> es un vector unitario, el cual tiene ceros en cada posición excepto en <span class="arithmatex">\(i\)</span> donde se encuentra un uno.  </p>
+<h2 id="gradiente-y-jacobiano">Gradiente y jacobiano</h2>
+<p>En matemáticas, el gradiente es una generalización de la derivada, ya que la derivada de una función esta definida para unicamente funciones de una variable. El gradiente es una función de valor vectorial. El gradiente esta definido como:
+$$
+\large
+\nabla_f(x) \overset{def}{=} \left(
+\begin{matrix}
+\frac{\partial f(x)}{\partial x_1} \\
+\frac{\partial f(x)}{\partial x_2} \\
+\frac{\partial f(x)}{\partial x_3} \\
+\vdots \\
+\frac{\partial f(x)}{\partial x_n}
+\end{matrix}
+\right)
+$$
+Con ello, se puede observar que el operador gradiente lleva a una función <span class="arithmatex">\(n\)</span> variabas variables a un vector de dimensión <span class="arithmatex">\(n\)</span> donde el elemento i-esimo es la derivada parcial de la función con respecto a la variable <span class="arithmatex">\(i\)</span>. El operador del gradiente se escribe como <span class="arithmatex">\(\nabla \{\}\)</span> y el vector gradiente como <span class="arithmatex">\(\nabla_f\)</span>   </p>
+<p>Por otro lado, si se tiene una función que mapea de un espacio vectorial de dimensión <span class="arithmatex">\(n\)</span> a un espacio de dimensión <span class="arithmatex">\(m\)</span> <span class="arithmatex">\((f:\mathbb{R}^n \rightarrow \mathbb{R}^m)\)</span>, el concepto de derivada no se encuetra definido con el operador gradiente. Es por ello que se necesita definir el concepto del operador jacobiano. La definición del jacobiano es la siguiente:<br />
+Sea <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}^m\)</span>, una función cuyas derivadas parciales de primer orden existen en todo <span class="arithmatex">\(\mathbb{R}^n\)</span> y denotemos como <span class="arithmatex">\(f_1,f_2,f_3,\dots,f_m\)</span> a sus componentes escalares. Se define la matriz jacobiana de <span class="arithmatex">\(f\)</span> en un punto <span class="arithmatex">\(x \in \mathbb{R}^n\)</span> como:
+$$
+\large
+J_f(x) = \left(
+\begin{matrix}
+\frac{\partial f_1(x)}{\partial x_1} &amp;\frac{\partial f_1(x)}{\partial x_2} &amp; \dots &amp;\frac{\partial f_1(x)}{\partial x_n} \\
+\frac{\partial f_2(x)}{\partial x_1} &amp;\frac{\partial f_2(x)}{\partial x_2} &amp; \dots &amp;\frac{\partial f_2(x)}{\partial x_n} \\
+\frac{\partial f_3(x)}{\partial x_1} &amp;\frac{\partial f_3(x)}{\partial x_2} &amp; \dots &amp;\frac{\partial f_3(x)}{\partial x_n} \\
+\vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+\frac{\partial f_m(x)}{\partial x_1} &amp;\frac{\partial f_m(x)}{\partial x_2} &amp; \dots &amp;\frac{\partial f_m(x)}{\partial x_n} \\
+\end{matrix}
+\right)
+$$</p>
+<h2 id="hessiano">Hessiano</h2>
+<p>La matriz hessiana o hessiano de un campo escalar es una matriz cuadrada de dimensión <span class="arithmatex">\(n \times n\)</span> que tiene como elementos las derivadas parciales de segundo orden. La matriz hessiana se define como:  </p>
+<p>Sea <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span>, un campo escalar cuyas derivadas parciales de segundo grado existen (clase <span class="arithmatex">\(C^2\)</span>). La matriz hessiana de <span class="arithmatex">\(f\)</span>, denotada por <span class="arithmatex">\(H_f(x)\)</span>, es una matriz cuadrada <span class="arithmatex">\(n \times n\)</span> definida como:
+$$
+\large
+H_f(x) = \left(
+\begin{matrix}
+\frac{\partial^2 f}{\partial x_1^2} (x) &amp;\frac{\partial^2 f}{\partial x_1 \partial x_2} (x) &amp; \dots &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} (x) \\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} (x) &amp;\frac{\partial^2 f}{\partial x_2^2} (x) &amp; \dots &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} (x) \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 
+\frac{\partial^2 f}{\partial x_n \partial x_1} (x) &amp;\frac{\partial^2 f}{\partial x_n \partial x_2} (x) &amp; \dots &amp; \frac{\partial^2 f}{\partial x_n^2} (x) \\
+\end{matrix}
+\right)
+$$
+Con ello, se afirma que el hessiano es aplicar el operador jacobiano al gradiente de la función <span class="arithmatex">\(f\)</span>.
+$$
+H_f(x) = J\lbrace \nabla f(x)\rbrace = J\lbrace J_f^T \rbrace
+$$
+Por otro lado, en algunos casos es más preferible calcular el hessiano por medio del operador gradiente. Para lograr este objetivo se define la operación divergencia el cual es la siguiente:
+$$
+\nabla \cdot f \overset{def}{=} 1^T\nabla f
+$$
+Con esto se tiene que el hessiano es calculado como:
+$$
+\nabla^2 f = \nabla^T \nabla f
+$$</p>
+<h2 id="optimizacion-convexa">Optimización convexa</h2>
+<h2 id="optimalidad">Optimalidad</h2>
+<h3 id="direccion-de-descenso">Dirección de descenso</h3>
+<h3 id="condicion-de-optimalidad-de-primer-orden">Condición de optimalidad de primer orden</h3>
+<h3 id="condicion-de-optimalidad-de-segundo-orden">Condición de optimalidad de segundo orden</h3>
+<h4 id="condiciones-de-segundo-orden-sin-restricciones">Condiciones de segundo orden sin restricciones</h4>
+<h4 id="condicion-necesaria-de-segundo-orden">Condición necesaria de segundo orden</h4>
+<h4 id="condicion-suficiente-de-segundo-orden">Condición suficiente de segundo orden</h4>
 
 
 
@@ -654,7 +698,7 @@ f(x)=\int \frac{\partial f(x)}{\partial y} dy
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
