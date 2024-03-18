@@ -24,6 +24,7 @@ extra_css:
   - stylesheets/extra.css
 
 theme:
+  logo: assets/images/icon.png
   name: material
   highlightjs: true
   hljs_languages:
