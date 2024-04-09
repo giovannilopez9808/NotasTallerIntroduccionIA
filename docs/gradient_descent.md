@@ -1,1 +1,1 @@
-# Gradient descent
+# Tamaños de paso

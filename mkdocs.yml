@@ -2,6 +2,7 @@ site_name: Introducción a la inteligencia artificial
 nav:
   - Introducción: ./index.md
   - Optimización: ./optimization.md
+  - Tamaños de paso: ./gradient_descent.md
   - Regresiónn lineal: ./regression.md
   - Reducción de dimensionalidad: ./dimensionality_reduction.md
   - Redes neuronales lineales: ./linear_neural_network.md
