@@ -18,3 +18,9 @@
 [data-md-color-scheme="default"] {
     background-color: #f8f9fa;
 }
+
+.script_header {
+  color: #f8f9fa;
+  font-weight: bold;
+  text-align: center;
+}

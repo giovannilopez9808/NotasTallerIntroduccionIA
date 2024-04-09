@@ -48,9 +48,9 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
-    
       <link rel="stylesheet" href="../stylesheets/monokai.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -762,11 +762,14 @@ f(x^*+\epsilon d)  = f(x^*)+\frac{1}{2}\epsilon^2 d^T \nabla^2 f(x^*) d
 f(x^*+\epsilon d) &gt; f(x^*)
 \]</div>
 <p>por lo tanto <span class="arithmatex">\(x^*\)</span> es un mínimo de la función.</p>
-<p>Como ejemplo de lo antes mencionado tenemos las siguientes graficas generadas por el script <code>optimalidad_example.py</code>. En el caso del primer y segundo ejemplo, las soluciones obtenidas al resolver el gradiente de la función corresponden a mínimos locales. Sin embargo, la diferencia entre estos dos casos es el valor del hessiano en la solución, la cual nos indica la concavidad de la función.</p>
+<p>Como ejemplo de lo antes mencionado tenemos las siguientes graficas generadas por el script <a href="#optimalidad_example"><code>optimalidad_example.py</code></a>. En el caso del primer y segundo ejemplo, las soluciones obtenidas al resolver el gradiente de la función corresponden a mínimos locales. Sin embargo, la diferencia entre estos dos casos es el valor del hessiano en la solución, la cual nos indica la concavidad de la función.</p>
 <p>Por otro lado, el ejemplo tres muestra que la solución al problema de optimización corresponde a un punto de mesa. Lo cual no corresponde a una solución aceptable para los propositos de la optimización de funciones.</p>
 <p>Para evitar este tipo de soluciones es necesario aplicar la condición suficiente de segundo orden, ya que se supone que el hessiano de la función es positivo definido en la solución. Por lo que, concluimos que <span class="arithmatex">\(x^*\)</span> es óptimo si y solo si <span class="arithmatex">\(\nabla f(x^*)=0, \; \nabla^2 f(x^*) \succeq 0\)</span>.</p>
 <p><img alt="optimalidad example" src="../graphics/optimalidad_example.png" title="Optimalidad example" /></p>
-<h4 id="optimalidad_examplepy">optimalidad_example.py</h4>
+<h3 class="script_header" id="optimalidad_example">
+optimalidad_example.py
+</h3>
+
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">concatenate</span><span class="p">,</span>
@@ -872,8 +875,6 @@ f(x^*+\epsilon d) &gt; f(x^*)
     <span class="s2">&quot;test.png&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
-
-<p>De los tres casos mostrados en la figura anterior, los dos promeros (de la izquierda) corresponden a mínimos locales (soluciones) y el tercero a un punto de mesa (no-solución).</p>
 
 
 
