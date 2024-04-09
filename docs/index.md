@@ -1,6 +1,6 @@
 # Introducción
 
-## Bibliografia
+## Referencias
 
 - Nocedal, J., & Wright, S. J. (1999). Numerical optimization. doi:10.1007/978-0-387-40065-5
 - Rencher, A. C., & Schaalje, G. B. (2007). Linear Models in Statistics (2nd ed.). Chichester, England: Wiley-Blackwell.

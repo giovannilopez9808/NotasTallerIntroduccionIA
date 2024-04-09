@@ -250,6 +250,15 @@ $$
 
 por lo tanto $x^*$ es un mínimo de la función.
 
+Como ejemplo de lo antes mencionado tenemos las siguientes graficas generadas por el script `optimalidad_example.py`. En el caso del primer y segundo ejemplo, las soluciones obtenidas al resolver el gradiente de la función corresponden a mínimos locales. Sin embargo, la diferencia entre estos dos casos es el valor del hessiano en la solución, la cual nos indica la concavidad de la función.
+
+Por otro lado, el ejemplo tres muestra que la solución al problema de optimización corresponde a un punto de mesa. Lo cual no corresponde a una solución aceptable para los propositos de la optimización de funciones.
+
+Para evitar este tipo de soluciones es necesario aplicar la condición suficiente de segundo orden, ya que se supone que el hessiano de la función es positivo definido en la solución. Por lo que, concluimos que $x^*$ es óptimo si y solo si $\nabla f(x^*)=0, \; \nabla^2 f(x^*) \succeq 0$.
+
+![optimalidad example](./graphics/optimalidad_example.png "Optimalidad example")
+
+#### optimalidad_example.py
 
 ``` python
 from matplotlib import pyplot
@@ -258,53 +267,100 @@ from numpy import (
     arange,
     zeros,
 )
-
 N = 10
 x = (arange(0, N)/N)**2
 z = zeros(int(N/2))
-f1 = concatenate([x[::-1], z, x])
-f2 = concatenate([-x[::-1], z, x])
-f3 = concatenate([x[::-1], x])
+f1 = concatenate(
+    [
+        x[::-1],
+        z,
+        x,
+    ]
+)
+f2 = concatenate(
+    [
+        -x[::-1],
+        z,
+        x,
+    ]
+)
+f3 = concatenate(
+    [
+        x[::-1],
+        x,
+    ]
+)
 fig, (ax1, ax2, ax3) = pyplot.subplots(
     1,
     3,
-    figsize=(20, 4)
+    figsize=(12, 4)
 )
-ax1.plot(f3, 'b')
+ax1.plot(
+    f3,
+    color="#7209b7",
+    lw=3,
+)
 ax1.annotate(
-    r'$\nabla f=0, \;\; \nabla^2f \succ 0$',
+    '$\\nabla f=0$\n$\\nabla^2f \\succ 0$',
     xy=(9.5, 0),
-    xytext=(6.4, .2),
+    xytext=(7.4, .2),
+    fontsize=16,
     arrowprops=dict(
-        facecolor='red',
+        facecolor='#4cc9f0',
         shrink=1
     ),
 )
-ax1.axis("off")
+ax1.axis(
+    "off"
+)
 ax2.plot(
     f1,
-    'b'
+    color="#7209b7",
+    lw=3,
 )
 ax2.annotate(
-    r'$\nabla f=0, \;\; \nabla^2f = 0$',
-    xy=(12, 0), xytext=(8, .15),
+    '$\\nabla f=0$\n$\\nabla^2 f = 0$',
+    xy=(
+        11.5,
+        0
+    ),
+    xytext=(
+        8.7,
+        0.2
+    ),
+    fontsize=16,
     arrowprops=dict(
-        facecolor='red',
-        shrink=1
+        facecolor='#4cc9f0',
+        shrink=1,
     ),
 )
-ax2.axis("off")
-ax3.plot(f2, 'b')
+ax2.axis(
+    "off"
+)
+ax3.plot(
+    f2,
+    color="#7209b7",
+    lw=3,
+)
 ax3.annotate(
-    r'$\nabla f=0, \;\; \nabla^2f = 0$',
-    xy=(12, 0),
-    xytext=(8, .3),
+    '$\\nabla f=0$\n$\\nabla^2f = 0$',
+    xy=(
+        13,
+        0
+    ),
+    xytext=(
+        10.5,
+        .3
+    ),
+    fontsize=16,
     arrowprops=dict(
-        facecolor='red',
+        facecolor='#4cc9f0',
         shrink=1
     ),
 )
-ax3.axis("off")
+ax3.axis(
+    "off"
+)
 pyplot.tight_layout()
 pyplot.savefig(
     "test.png"
