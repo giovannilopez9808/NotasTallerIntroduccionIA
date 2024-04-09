@@ -250,7 +250,7 @@ $$
 
 por lo tanto $x^*$ es un mínimo de la función.
 
-Como ejemplo de lo antes mencionado tenemos las siguientes graficas generadas por el script `optimalidad_example.py`. En el caso del primer y segundo ejemplo, las soluciones obtenidas al resolver el gradiente de la función corresponden a mínimos locales. Sin embargo, la diferencia entre estos dos casos es el valor del hessiano en la solución, la cual nos indica la concavidad de la función.
+Como ejemplo de lo antes mencionado tenemos las siguientes graficas generadas por el script [`optimalidad_example.py`](#optimalidad_example). En el caso del primer y segundo ejemplo, las soluciones obtenidas al resolver el gradiente de la función corresponden a mínimos locales. Sin embargo, la diferencia entre estos dos casos es el valor del hessiano en la solución, la cual nos indica la concavidad de la función.
 
 Por otro lado, el ejemplo tres muestra que la solución al problema de optimización corresponde a un punto de mesa. Lo cual no corresponde a una solución aceptable para los propositos de la optimización de funciones.
 
@@ -258,7 +258,9 @@ Para evitar este tipo de soluciones es necesario aplicar la condición suficient
 
 ![optimalidad example](./graphics/optimalidad_example.png "Optimalidad example")
 
-#### optimalidad_example.py
+<h3 class="script_header" id="optimalidad_example">
+optimalidad_example.py
+</h3>
 
 ``` python
 from matplotlib import pyplot
@@ -366,5 +368,3 @@ pyplot.savefig(
     "test.png"
 )
 ```
-
-De los tres casos mostrados en la figura anterior, los dos promeros (de la izquierda) corresponden a mínimos locales (soluciones) y el tercero a un punto de mesa (no-solución).
