@@ -20,7 +20,7 @@
     
     
       
-        <title>Tamaños de paso - Introducción a la inteligencia artificial</title>
+        <title>Algoritmos de optimización - Introducción a la inteligencia artificial</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tamanos-de-paso" class="md-skip">
+        <a href="#algoritmos-de-optimizacion" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tamaños de paso
+              Algoritmos de optimización
             
           </span>
         </div>
@@ -254,15 +254,90 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Algoritmos de optimización
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Tamaños de paso
+    Algoritmos de optimización
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descenso-de-gradiente-gd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descenso de Gradiente (GD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descenso-de-gradiente-estocastico-sgd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descenso de Gradiente Estocástico (SGD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descenso-acelerado-de-nesterov-nag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descenso Acelerado de Nesterov (NAG)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descenso-con-inercia-momentum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descenso con Inercia (momentum)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adam" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADAM
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -319,7 +394,7 @@
         
   
   <span class="md-ellipsis">
-    Redes neuronales lineales
+    Redes neuronales lineales y  no lineales
   </span>
   
 
@@ -335,71 +410,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../perceptron/" class="md-nav__link">
+      <a href="../deep_learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Perceptron multicapa
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../convolutional/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Redes convolucionales
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../recurrent/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Redes recurrentes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cnnrnn/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Redes híbridas
+    Aprendizaje profundo
   </span>
   
 
@@ -428,46 +443,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../transformer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transformer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gan/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GAN's
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -483,7 +458,12 @@
                   
 
 
-<h1 id="tamanos-de-paso">Tamaños de paso</h1>
+<h1 id="algoritmos-de-optimizacion">Algoritmos de optimización</h1>
+<h2 id="descenso-de-gradiente-gd">Descenso de Gradiente (GD)</h2>
+<h2 id="descenso-de-gradiente-estocastico-sgd">Descenso de Gradiente Estocástico (SGD)</h2>
+<h2 id="descenso-acelerado-de-nesterov-nag">Descenso Acelerado de Nesterov (NAG)</h2>
+<h2 id="descenso-con-inercia-momentum">Descenso con Inercia (momentum)</h2>
+<h2 id="adam">ADAM</h2>
 
 
 
