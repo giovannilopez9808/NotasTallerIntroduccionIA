@@ -2,17 +2,12 @@ site_name: Introducción a la inteligencia artificial
 nav:
   - Introducción: ./index.md
   - Optimización: ./optimization.md
-  - Tamaños de paso: ./gradient_descent.md
+  - Algoritmos de optimización: ./gradient_descent.md
   - Regresiónn lineal: ./regression.md
   - Reducción de dimensionalidad: ./dimensionality_reduction.md
-  - Redes neuronales lineales: ./linear_neural_network.md
-  - Perceptron multicapa: ./perceptron.md
-  - Redes convolucionales: ./convolutional.md
-  - Redes recurrentes: ./recurrent.md
-  - Redes híbridas: ./cnnrnn.md
+  - Redes neuronales lineales y  no lineales: ./linear_neural_network.md
+  - Aprendizaje profundo: ./deep_learning.md
   - Mecanismo de atención: ./attention.md
-  - Transformer: ./transformer.md
-  - GAN's: ./gan.md
 
 #- katex optimization for large equations
 extra_javascript:
