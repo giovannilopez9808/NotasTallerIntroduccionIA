@@ -1,6 +1,14 @@
 # Introducción
 
-## Referencias
+## Objetivos generales
+
+El curso de Introducción a la Inteligencia Artificial tiene como objetivo principal dotar a los participantes de las habilidades y conocimientos necesarios para comprender, aplicar y evaluar modelos de aprendizaje automático en diversos ambientes.
+
+A lo largo del curso, los asistentes desarrollarán una comprensión conceptual sólida de los fundamentos de la inteligencia artificial, ya que se revisaran y aplicaran una variedad de algoritmos para resolver problemas del mundo real. Se fomentará una reflexión ética sobre el uso de estas tecnologías, promoviendo la conciencia sobre temas como la equidad y la privacidad de los datos.
+
+Con una combinación de teoría y práctica, este curso preparará a los participantes para enfrentar desafíos futuros en el campo del aprendizaje automático y les proporcionará una base sólida para estudios avanzados en el área.
+
+## Bibliografía
 
 - Nocedal, J., & Wright, S. J. (1999). Numerical optimization. doi:10.1007/978-0-387-40065-5
 - Rencher, A. C., & Schaalje, G. B. (2007). Linear Models in Statistics (2nd ed.). Chichester, England: Wiley-Blackwell.
